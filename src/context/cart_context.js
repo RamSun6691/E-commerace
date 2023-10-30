@@ -3,18 +3,18 @@ import reducer from "../reducer/CartReducer";
 
 const CartContext = createContext();
 
-const getLocalCartData = () => {
-  let localCartData = localStorage.getItem("thapaCart");
-  if (localCartData === []) {
-    return [];
-  } else {
-    return JSON.parse(localCartData);
-  }
-};
+// const getLocalCartData = () => {
+//   let localCartData = localStorage.getItem("thapaCart");
+//   if (localCartData === []) {
+//     return [];
+//   } else {
+//     return JSON.parse(localCartData);
+//   }
+// };
 
 const initialState = {
   cart: [],
-  cart: getLocalCartData(),
+  // cart: getLocalCartData(),
   total_item: "",
   total_amount: "",
   shipping_fee: 5000,
